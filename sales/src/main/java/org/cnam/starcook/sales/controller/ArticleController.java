@@ -56,6 +56,7 @@ public class ArticleController {
         creerArticleResponse.buyingPrice = article.getBuyingPrice();
         creerArticleResponse.categoryLabel = article.getCategory().getLabel();
         creerArticleResponse.priceHT = article.getPriceHT();
+        creerArticleResponse.taxAmount = article.getCategory().getTaxe().getAmount();
         creerArticleResponse.priceTTC = article.getPriceHT() * (1 + article.getCategory().getTaxe().getAmount());
         creerArticleResponse.promotionAmount = article.getPromotion().getAmount();
         creerArticleResponse.promotionStartDate = article.getPromotion().getStartDate();

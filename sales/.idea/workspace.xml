@@ -2,56 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4086fb6-ea9d-46e2-aff0-ea8b4fcae200" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/builders/SalesObjectBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/controller/CatalogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/controller/CommandeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/domain/Commande.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/dto/article/ArticleDetailsResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/dto/article/ArticleToCommandRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/dto/article/CreerArticleRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/dto/article/CreerArticleResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/dto/catalog/CatalogDetailsResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/dto/commande/CommandeDetailsResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/dto/commande/CreerCommandeRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/dto/commande/CreerCommandeResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/entities/CommandeModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/repositories/ICommandeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/services/CatalogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/services/CommandeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/domain/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/domain/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/domain/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/domain/Catalog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/domain/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/domain/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/domain/Promotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/domain/Promotion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/domain/Tax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/domain/Tax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/dto/ArticleDetailsRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/dto/ArticleDetailsResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/entities/ArticleModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/entities/ArticleModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/entities/CategoryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/entities/CategoryModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/entities/PromotionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/entities/PromotionModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/entities/TaxModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/entities/TaxModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/factories/ArticleFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/repositories/IArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/repositories/IArticleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/services/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cnam/starcook/sales/services/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/controller/ArticleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/domain/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/domain/Article.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/domain/Catalog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/domain/Catalog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/domain/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/domain/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/domain/Promotion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/domain/Promotion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/domain/Tax.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/domain/Tax.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/dto/ArticleDetailsRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/dto/ArticleDetailsResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/entities/ArticleModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/entities/ArticleModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/entities/CategoryModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/entities/CategoryModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/entities/PromotionModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/entities/PromotionModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/entities/TaxModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/entities/TaxModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/factories/ArticleFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/repositories/IArticleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/repositories/IArticleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/services/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/cnam/starcook/sales/services/ArticleService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,11 +138,6 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
@@ -223,7 +170,7 @@
       <workItem from="1580890409453" duration="12214000" />
       <workItem from="1581882502064" duration="283000" />
       <workItem from="1581927112588" duration="13833000" />
-      <workItem from="1582820780870" duration="28045000" />
+      <workItem from="1582820780870" duration="28754000" />
     </task>
     <servers />
   </component>
