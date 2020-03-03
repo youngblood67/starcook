@@ -9,45 +9,6 @@ public class Article {
     private Double buyingPrice;
     private Promotion promotion;
 
-    public Article(int id, String ref, String label, Category category, Double priceHT, Double buyingPrice, Promotion promotion) {
-        this.id = id;
-        this.ref = ref;
-        this.label = label;
-        this.category = category;
-        this.priceHT = priceHT;
-        this.buyingPrice = buyingPrice;
-        this.promotion = promotion;
-    }
-
-    public Article(String ref, String label, Category category, Double priceHT, Double buyingPrice, Promotion promotion) {
-        this.id = 0;
-        this.ref = ref;
-        this.label = label;
-        this.category = category;
-        this.priceHT = priceHT;
-        this.buyingPrice = buyingPrice;
-        this.promotion = promotion;
-    }
-
-    public Article(String ref, String label, Category category, Double priceHT, Promotion promotion) {
-        this.id = 0;
-        this.ref = ref;
-        this.label = label;
-        this.category = category;
-        this.priceHT = priceHT;
-        this.buyingPrice = 0D;
-        this.promotion = promotion;
-    }
-
-    public Article(String ref, String label, Category category, Promotion promotion) {
-        this.id = 0;
-        this.ref = ref;
-        this.label = label;
-        this.category = category;
-        this.priceHT = 0D;
-        this.buyingPrice = 0D;
-        this.promotion = promotion;
-    }
 
     public Article() {
         this.id = 0;

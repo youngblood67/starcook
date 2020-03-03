@@ -8,13 +8,16 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "tax")
 public class TaxModel {
+
     @Id
     @GeneratedValue
     private int id;
 
     private Double amount;
 
-    //GETTERS AND SETTERS
+    public TaxModel(Double amount) {
+        this.amount = amount;
+    }
 
     public int getId() {
         return id;
@@ -37,10 +40,7 @@ public class TaxModel {
         return super.toString();
     }
 
-    public TaxModel(Double amount) {
-        this.amount = amount;
-    }
-
     public TaxModel() {
     }
+
 }

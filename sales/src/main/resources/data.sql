@@ -9,10 +9,10 @@ INSERT INTO tax(amount) VALUES (0.05);
 INSERT INTO category(label,ID_TAXE) VALUES ('boxe',1);
 INSERT INTO category(label,ID_TAXE) VALUES ('football',2);
 
-INSERT INTO article(ref,label,priceHT,buying_price,ID_CATEGORY,ID_PROMO) VALUES ('BOX3267FF', 'Sac de frappe',120,50,1,1);
-INSERT INTO article(ref,label,priceHT,buying_price,ID_CATEGORY,ID_PROMO) VALUES ('BOX4557EF', 'Gants de boxe', 40,10,1,1);
-INSERT INTO article(ref,label,priceHT,buying_price,ID_CATEGORY,ID_PROMO) VALUES ('SOC1475OP', 'Ballon de football', 19,5,2,2);
-INSERT INTO article(ref,label,priceHT,buying_price,ID_CATEGORY,ID_PROMO) VALUES ('SOC98711M', 'Maillot de football',  49,10,2,2);
+INSERT INTO article(reference,label,priceHT,buying_price,ID_CATEGORY,ID_PROMO) VALUES ('BOX3267FF', 'Sac de frappe',120,50,1,1);
+INSERT INTO article(reference,label,priceHT,buying_price,ID_CATEGORY,ID_PROMO) VALUES ('BOX4557EF', 'Gants de boxe', 40,10,1,1);
+INSERT INTO article(reference,label,priceHT,buying_price,ID_CATEGORY,ID_PROMO) VALUES ('SOC1475OP', 'Ballon de football', 19,5,2,2);
+INSERT INTO article(reference,label,priceHT,buying_price,ID_CATEGORY,ID_PROMO) VALUES ('SOC98711M', 'Maillot de football',  49,10,2,2);
 
 INSERT INTO `catalog`(label) VALUES('catalogue boxe');
 INSERT INTO `catalog`(label) VALUES('catalogue football');
@@ -22,3 +22,11 @@ INSERT INTO ART_CATALOG(ID_ART,ID_CATALOG) VALUES(2,1);
 INSERT INTO ART_CATALOG(ID_ART,ID_CATALOG) VALUES(3,2);
 INSERT INTO ART_CATALOG(ID_ART,ID_CATALOG) VALUES(3,2);
 
+INSERT INTO commande(reference, id_client,is_payed) VALUES ('REFCOM1',1,false );
+INSERT INTO commande(reference, id_client,is_payed) VALUES ('REFCOM2',2,false );
+
+INSERT INTO ART_COMMANDES(ID_ART,ID_COMMANDES) VALUES(1,1);
+INSERT INTO ART_COMMANDES(ID_ART,ID_COMMANDES) VALUES(1,2);
+INSERT INTO ART_COMMANDES(ID_ART,ID_COMMANDES) VALUES(1,3);
+INSERT INTO ART_COMMANDES(ID_ART,ID_COMMANDES) VALUES(2,1);
+INSERT INTO ART_COMMANDES(ID_ART,ID_COMMANDES) VALUES(2,2);

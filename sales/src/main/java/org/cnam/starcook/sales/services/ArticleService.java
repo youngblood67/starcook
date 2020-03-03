@@ -1,13 +1,12 @@
 package org.cnam.starcook.sales.services;
 
-import org.cnam.starcook.sales.domain.Tax;
-import org.cnam.starcook.sales.dto.ArticleDetailsRequest;
-import org.cnam.starcook.sales.dto.ArticleDetailsResponse;
+import org.cnam.starcook.sales.domain.Article;
+import org.cnam.starcook.sales.dto.article.CreerArticleRequest;
 import org.cnam.starcook.sales.entities.ArticleModel;
 import org.cnam.starcook.sales.entities.CategoryModel;
 import org.cnam.starcook.sales.entities.PromotionModel;
 import org.cnam.starcook.sales.entities.TaxModel;
-import org.cnam.starcook.sales.factories.ArticleFactory;
+import org.cnam.starcook.sales.builders.SalesObjectBuilder;
 import org.cnam.starcook.sales.repositories.IArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,38 +19,36 @@ public class ArticleService {
     @Autowired
     private IArticleRepository articleRepository;
 
-    public List<ArticleDetailsResponse> listArticleDetails() {
+    public List<Article> listArticles() {
         List<ArticleModel> articleModelList = articleRepository.findAll();
-        List<ArticleDetailsResponse> articleDetailsResponseList = new ArrayList<ArticleDetailsResponse>();
+        List<Article> articlesList = new ArrayList<Article>();
         for (ArticleModel am : articleModelList) {
-            ArticleDetailsResponse articleDetailsResponse = ArticleFactory.BuildArticleDetailsResponse(am);
-            articleDetailsResponseList.add(articleDetailsResponse);
+            Article article = SalesObjectBuilder.modelToDomainObject(am);
+            articlesList.add(article);
         }
-        return articleDetailsResponseList;
+        return articlesList;
     }
 
-    public ArticleDetailsResponse findArticleDetailsById(int id) {
+    public Article findArticleById(int id) {
         ArticleModel articleModel = articleRepository.findById(id);
-
-        return ArticleFactory.BuildArticleDetailsResponse(articleModel);
+        return SalesObjectBuilder.modelToDomainObject(articleModel);
     }
 
-    public ArticleModel saveArticle(ArticleDetailsRequest a) {
-        TaxModel taxModel = new TaxModel(a.getTaxAmount());
-        CategoryModel categoryModel = new CategoryModel(a.getCategoryLabel());
+    public Article createArticle(CreerArticleRequest creerArticleRequest) {
+
+        TaxModel taxModel = new TaxModel(creerArticleRequest.taxAmount);
+        CategoryModel categoryModel = new CategoryModel(creerArticleRequest.categoryLabel, taxModel);
         categoryModel.setTaxe(taxModel);
-        ArticleModel articleModel = new ArticleModel();
-        articleModel.setRef(a.getRef());
-        articleModel.setLabel(a.getLabel());
-        articleModel.setCategory(categoryModel);
-        articleModel.setPriceHT(a.getPriceHT());
-        articleModel.setBuyingPrice(a.getBuyingPrice());
-        PromotionModel promotionModel = new PromotionModel();
-        promotionModel.setAmount(a.getPromotionAmount());
-        promotionModel.setStartDate(a.getPromotionStartDate());
-        promotionModel.setEndDate(a.getPromotionEndDate());
+        PromotionModel promotionModel = new PromotionModel(creerArticleRequest.promotionAmount, creerArticleRequest.promotionStartDate, creerArticleRequest.promotionEndDate);
+        ArticleModel articleModel = new ArticleModel(creerArticleRequest.reference, creerArticleRequest.label, categoryModel, creerArticleRequest.priceHT, creerArticleRequest.buyingPrice, promotionModel);
         articleModel.setPromotion(promotionModel);
-        return articleRepository.save(articleModel);
+        ArticleModel savedArticleModel = articleRepository.save(articleModel);
+        Article article = SalesObjectBuilder.modelToDomainObject(savedArticleModel);
+        return article;
     }
 
+    public Boolean isDisponible(String reference) {
+        ArticleModel articleModel = articleRepository.findByReference(reference);
+        return articleModel != null;
+    }
 }

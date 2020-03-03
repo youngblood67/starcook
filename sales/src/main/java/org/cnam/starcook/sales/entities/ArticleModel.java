@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.Date;
 
 @Entity
 @Table(name = "article")
@@ -13,12 +14,12 @@ public class ArticleModel {
     @GeneratedValue
     private int id;
 
-    private String ref;
+    private String reference;
 
     private String label;
 
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "ID_CATEGORY")
     private CategoryModel category;
 
@@ -26,7 +27,7 @@ public class ArticleModel {
 
     private Double buyingPrice;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "ID_PROMO")
     private PromotionModel promotion;
 
@@ -36,7 +37,17 @@ public class ArticleModel {
             joinColumns = @JoinColumn(name = "ID_ART"),
             inverseJoinColumns = @JoinColumn(name = "ID_CATALOG")
     )
+
     private Collection<CatalogModel> catalogs;
+
+    @JsonIgnore
+    @ManyToMany
+    @JoinTable(name = "ART_COMMANDES",
+            joinColumns = @JoinColumn(name = "ID_COMMANDES"),
+            inverseJoinColumns = @JoinColumn(name = "ID_ART")
+    )
+
+    private Collection<CommandeModel> commandes;
 
     //GETTERS AND SETTERS
 
@@ -49,11 +60,11 @@ public class ArticleModel {
     }
 
     public String getRef() {
-        return ref;
+        return reference;
     }
 
     public void setRef(String ref) {
-        this.ref = ref;
+        this.reference = ref;
     }
 
     public String getLabel() {
@@ -104,6 +115,14 @@ public class ArticleModel {
         this.catalogs = catalogs;
     }
 
+    public Collection<CommandeModel> getCommandes() {
+        return commandes;
+    }
+
+    public void setCommandes(Collection<CommandeModel> commandes) {
+        this.commandes = commandes;
+    }
+
     @Override
     public String toString() {
         return super.toString();
@@ -111,4 +130,24 @@ public class ArticleModel {
 
     public ArticleModel() {
     }
+
+    public ArticleModel(int id, String ref, String label, CategoryModel categoryModel, double priceHt, double buyingPrice, PromotionModel promotionModel) {
+        this.id = id;
+        this.reference = ref;
+        this.label = label;
+        this.category = categoryModel;
+        this.priceHT = priceHt;
+        this.buyingPrice = buyingPrice;
+        this.promotion = promotionModel;
+    }
+
+    public ArticleModel(String ref, String label, CategoryModel categoryModel, double priceHt, double buyingPrice, PromotionModel promotionModel) {
+        this.reference = ref;
+        this.label = label;
+        this.category = categoryModel;
+        this.priceHT = priceHt;
+        this.buyingPrice = buyingPrice;
+        this.promotion = promotionModel;
+    }
+
 }

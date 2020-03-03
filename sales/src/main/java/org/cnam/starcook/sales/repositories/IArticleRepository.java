@@ -5,4 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface IArticleRepository extends JpaRepository<ArticleModel, Integer> {
     ArticleModel findById(int id);
+    ArticleModel findByReference(String reference);
 }

@@ -8,27 +8,6 @@ public class Promotion {
     private Date startDate;
     private Date endDate;
 
-    public Promotion(int id, Double amount, Date startDate, Date endDate) {
-        this.id = id;
-        this.amount = amount;
-        this.startDate = startDate;
-        this.endDate = endDate;
-    }
-
-    public Promotion(Double amount, Date startDate, Date endDate) {
-        this.id = 0;
-        this.amount = amount;
-        this.startDate = startDate;
-        this.endDate = endDate;
-    }
-
-    public Promotion(Double amount, Date startDate) {
-        this.id = 0;
-        this.amount = amount;
-        this.startDate = startDate;
-        this.endDate = null;
-    }
-
     public Promotion() {
         this.id = 0;
         this.amount = 0D;

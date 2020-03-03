@@ -7,18 +7,6 @@ public class Catalog {
     private String label;
     private ArrayList<Article> articles;
 
-    public Catalog(int id, String label, ArrayList<Article> articles) {
-        this.id = id;
-        this.label = label;
-        this.articles = articles;
-    }
-
-    public Catalog(String label, ArrayList<Article> articles) {
-        this.id = 0;
-        this.label = label;
-        this.articles = articles;
-    }
-
     public Catalog() {
         this.id = 0;
         this.label = "";
@@ -27,6 +15,14 @@ public class Catalog {
 
     public void addArticle(Article article) {
         this.articles.add(article);
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
     }
 
     public void setArticles(ArrayList<Article> articles) {

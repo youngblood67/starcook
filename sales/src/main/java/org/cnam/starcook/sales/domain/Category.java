@@ -5,18 +5,6 @@ public class Category {
     private String label;
     private Tax tax;
 
-    public Category(int id, String label, Tax tax) {
-        this.id = id;
-        this.label = label;
-        this.tax = tax;
-    }
-
-    public Category(String label, Tax tax) {
-        this.id = 0;
-        this.label = label;
-        this.tax = tax;
-    }
-
     public Category() {
         this.id = 0;
         this.label = "";

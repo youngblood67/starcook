@@ -56,4 +56,14 @@ public class PromotionModel {
     public String toString() {
         return super.toString();
     }
+
+    public PromotionModel() {
+
+    }
+
+    public PromotionModel(Double amount, Date startDate, Date endDate) {
+        this.amount = amount;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
 }
